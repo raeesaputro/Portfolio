@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- EDIT: PAGE CHARACTER SET AND VIEWPORT -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- EDIT: PAGE TITLE -->
+    <title>Raeyhan Rizky - Portfolio</title>
+    
+    <!-- EDIT: FAVICON OR META TAGS CAN GO HERE -->
+    
+    <!-- IMPORT GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- TAILWIND CONFIGURATION -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#000000',
+                        white: '#ffffff',
+                        border: '#1e1e1e'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- GLOBAL STYLES (CUSTOM SCROLLBAR & TEXT STROKE) -->
+    <style>
+        /* SCROLLBAR STYLING */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e1e1e;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333333;
+        }
+
+        /* TEXT SELECTION STYLING */
+        ::selection {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* TEXT STROKE UTILITIES */
+        .text-stroke {
+            color: transparent;
+            -webkit-text-stroke: 1px #ffffff;
+        }
+        @media (min-width: 768px) {
+            .text-stroke {
+                -webkit-text-stroke: 2px #ffffff;
+            }
+        }
+        .text-stroke-muted {
+            color: transparent;
+            -webkit-text-stroke: 1px #333333;
+        }
+        .text-stroke-bright {
+            color: transparent;
+            -webkit-text-stroke: 2px #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-sans overflow-x-hidden antialiased">
+
+    <!-- NAVBAR SECTION -->
+    <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/60 border-b border-border transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center">
+        <!-- EDIT: NAVBAR BRAND LINK -->
+        <a href="#" class="text-xl font-black tracking-widest uppercase hover:opacity-80 transition-opacity">
+            <!-- EDIT: NAVBAR BRAND NAME -->
+            REY
+        </a>
+        
+        <div class="hidden md:flex gap-8 items-center text-sm font-medium">
+            <!-- EDIT: NAVBAR ABOUT LINK -->
+            <a href="#about" class="hover:text-gray-300 transition-colors">
+                <!-- EDIT: ABOUT TEXT -->
+                About
+            </a>
+            <!-- EDIT: NAVBAR WORK LINK -->
+            <a href="#work" class="hover:text-gray-300 transition-colors">
+                <!-- EDIT: WORK TEXT -->
+                Work
+            </a>
+        </div>
+
+        <!-- EDIT: NAVBAR CTA BUTTON LINK -->
+        <a href="#contact" class="magnetic-btn inline-block px-5 py-2.5 bg-white text-black text-sm font-bold rounded-full hover:bg-gray-200 transition-colors">
+            <!-- EDIT: NAVBAR CTA TEXT -->
+            Book a Call
+        </a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <main class="min-h-screen flex items-center justify-center px-4 pt-20 pb-10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 flex-wrap text-[15vw] md:text-[9vw] font-black leading-none uppercase select-none">
+            
+            <!-- EDIT: HERO FIRST NAME (STROKED) -->
+            <span class="text-stroke tracking-tighter">RAEYHAN</span>
+            
+            <!-- FLOATING PROFILE PICTURE UI -->
+            <div id="profile-hover-zone" class="relative w-32 h-32 md:w-[10vw] md:h-[10vw] max-w-[160px] max-h-[160px] flex items-center justify-center cursor-pointer z-20">
+                <div class="profile-float-wrapper w-full h-full relative">
+                    
+                    <!-- TOOLTIP -->
+                    <div class="profile-tooltip absolute -top-12 md:-top-16 left-1/2 -translate-x-1/2 opacity-0 pointer-events-none bg-white text-black text-xs md:text-sm px-4 py-1.5 md:py-2 rounded-full font-bold whitespace-nowrap z-30 shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                        <!-- EDIT: TOOLTIP TEXT -->
+                        ✦ Available for work
+                    </div>
+                    
+                    <!-- EDIT: PROFILE PICTURE IMAGE SOURCE AND ALT TEXT -->
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img w-full h-full object-cover rounded-full border-2 border-border relative z-20" />
+                </div>
+            </div>
+
+            <!-- EDIT: HERO LAST NAME (SOLID) -->
+            <span class="tracking-tighter text-white">RIZKY</span>
+
+        </div>
+    </main>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 md:py-40 px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            
+            <!-- LEFT COLUMN: BIO -->
+            <div class="fade-up flex flex-col justify-center">
+                <!-- EDIT: ABOUT SECTION LABEL -->
+                <h2 class="text-xs md:text-sm text-gray-500 uppercase tracking-[0.2em] font-bold mb-8">About Me</h2>
+                
+                <!-- EDIT: MAIN BIO TEXT -->
+                <p class="text-2xl md:text-4xl font-medium leading-[1.3] text-gray-200">
+                    I'm a multidisciplinary designer and developer crafting immersive digital experiences. Blending clean aesthetics with engaging motion to build interactive interfaces.
+                </p>
+            </div>
+            
+            <!-- RIGHT COLUMN: METRICS & PILLS -->
+            <div class="fade-up grid grid-cols-2 gap-4 md:gap-6">
+                <!-- METRIC CARD 1 -->
+                <div class="border border-border p-6 md:p-8 rounded-2xl bg-black/50 backdrop-blur-sm flex flex-col justify-center">
+                    <!-- EDIT: METRIC 1 VALUE -->
+                    <h3 class="text-4xl md:text-5xl font-black mb-2 text-white">4.7M+</h3>
+                    <!-- EDIT: METRIC 1 LABEL -->
+                    <p class="text-sm md:text-base text-gray-400 font-medium">Total Views</p>
+                </div>
+                
+                <!-- METRIC CARD 2 -->
+                <div class="border border-border p-6 md:p-8 rounded-2xl bg-black/50 backdrop-blur-sm flex flex-col justify-center">
+                    <!-- EDIT: METRIC 2 VALUE -->
+                    <h3 class="text-4xl md:text-5xl font-black mb-2 text-white">15+</h3>
+                    <!-- EDIT: METRIC 2 LABEL -->
+                    <p class="text-sm md:text-base text-gray-400 font-medium">Projects Done</p>
+                </div>
+                
+                <!-- SOFTWARE STACK PILLS -->
+                <div class="col-span-2 border border-border p-6 md:p-8 rounded-2xl bg-black/50 backdrop-blur-sm">
+                    <!-- EDIT: STACK SECTION LABEL -->
+                    <p class="text-xs md:text-sm text-gray-500 uppercase tracking-[0.2em] font-bold mb-6">Software Stack</p>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- EDIT: SOFTWARE PILL 1 -->
+                        <span class="px-4 py-2 border border-[#333333] bg-[#0a0a0a] rounded-full text-xs md:text-sm font-medium hover:border-gray-400 transition-colors cursor-default">Figma</span>
+                        <!-- EDIT: SOFTWARE PILL 2 -->
+                        <span class="px-4 py-2 border border-[#333333] bg-[#0a0a0a] rounded-full text-xs md:text-sm font-medium hover:border-gray-400 transition-colors cursor-default">Adobe Premiere Pro</span>
+                        <!-- EDIT: SOFTWARE PILL 3 -->
+                        <span class="px-4 py-2 border border-[#333333] bg-[#0a0a0a] rounded-full text-xs md:text-sm font-medium hover:border-gray-400 transition-colors cursor-default">Blender</span>
+                        <!-- EDIT: SOFTWARE PILL 4 -->
+                        <span class="px-4 py-2 border border-[#333333] bg-[#0a0a0a] rounded-full text-xs md:text-sm font-medium hover:border-gray-400 transition-colors cursor-default">CapCut</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="work" class="py-24 md:py-40 px-6 md:px-12 max-w-7xl mx-auto border-t border-border/50 relative z-10">
+        <!-- EDIT: PROJECTS SECTION LABEL -->
+        <h2 class="fade-up text-xs md:text-sm text-gray-500 uppercase tracking-[0.2em] font-bold mb-12 md:mb-20">Selected Works</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            
+            <!-- PROJECT CARD 1 -->
+            <!-- EDIT: PROJECT 1 LINK -->
+            <a href="#" class="fade-up group relative border border-border flex flex-col justify-end p-8 md:p-10 min-h-[350px] md:min-h-[400px] overflow-hidden rounded-2xl bg-[#030303] hover:bg-[#0a0a0a] transition-colors duration-500 cursor-pointer">
+                <!-- EDIT: PROJECT 1 BACKGROUND NUMBER -->
+                <div class="absolute top-4 right-6 text-stroke-muted text-[100px] font-black opacity-30 transition-all duration-500 group-hover:text-stroke-bright group-hover:-translate-y-2 select-none pointer-events-none">01</div>
+                
+                <!-- ARROW ICON -->
+                <div class="absolute top-10 right-10 text-white transition-transform duration-500 group-hover:rotate-45">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 19L19 5M19 5v10M19 5H9"></path></svg>
+                </div>
+
+                <div class="relative z-10 w-full mt-auto">
+                    <!-- EDIT: PROJECT 1 TITLE -->
+                    <h3 class="text-3xl font-bold tracking-tight text-white mb-2">Visual Identity System</h3>
+                    <!-- EDIT: PROJECT 1 CATEGORY -->
+                    <p class="text-gray-400 font-medium text-sm md:text-base">Graphic Design</p>
+                    
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out w-full">
+                        <div class="overflow-hidden">
+                            <!-- EDIT: PROJECT 1 DESCRIPTION -->
+                            <p class="pt-6 text-gray-300 text-sm md:text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                A comprehensive visual identity project focusing on brand synergy, typography systems, and modern aesthetic adaptations across various digital touchpoints.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT CARD 2 -->
+            <!-- EDIT: PROJECT 2 LINK -->
+            <a href="#" class="fade-up group relative border border-border flex flex-col justify-end p-8 md:p-10 min-h-[350px] md:min-h-[400px] overflow-hidden rounded-2xl bg-[#030303] hover:bg-[#0a0a0a] transition-colors duration-500 cursor-pointer mt-0 md:mt-12">
+                <!-- EDIT: PROJECT 2 BACKGROUND NUMBER -->
+                <div class="absolute top-4 right-6 text-stroke-muted text-[100px] font-black opacity-30 transition-all duration-500 group-hover:text-stroke-bright group-hover:-translate-y-2 select-none pointer-events-none">02</div>
+                
+                <!-- ARROW ICON -->
+                <div class="absolute top-10 right-10 text-white transition-transform duration-500 group-hover:rotate-45">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 19L19 5M19 5v10M19 5H9"></path></svg>
+                </div>
+
+                <div class="relative z-10 w-full mt-auto">
+                    <!-- EDIT: PROJECT 2 TITLE -->
+                    <h3 class="text-3xl font-bold tracking-tight text-white mb-2">Short Film: Residue</h3>
+                    <!-- EDIT: PROJECT 2 CATEGORY -->
+                    <p class="text-gray-400 font-medium text-sm md:text-base">Video Production</p>
+                    
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out w-full">
+                        <div class="overflow-hidden">
+                            <!-- EDIT: PROJECT 2 DESCRIPTION -->
+                            <p class="pt-6 text-gray-300 text-sm md:text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                An emotional cinematic short film exploring themes of memory and loss, featuring complete pre-to-post production execution and advanced color grading.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT CARD 3 -->
+            <!-- EDIT: PROJECT 3 LINK -->
+            <a href="#" class="fade-up group relative border border-border flex flex-col justify-end p-8 md:p-10 min-h-[350px] md:min-h-[400px] overflow-hidden rounded-2xl bg-[#030303] hover:bg-[#0a0a0a] transition-colors duration-500 cursor-pointer">
+                <!-- EDIT: PROJECT 3 BACKGROUND NUMBER -->
+                <div class="absolute top-4 right-6 text-stroke-muted text-[100px] font-black opacity-30 transition-all duration-500 group-hover:text-stroke-bright group-hover:-translate-y-2 select-none pointer-events-none">03</div>
+                
+                <!-- ARROW ICON -->
+                <div class="absolute top-10 right-10 text-white transition-transform duration-500 group-hover:rotate-45">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 19L19 5M19 5v10M19 5H9"></path></svg>
+                </div>
+
+                <div class="relative z-10 w-full mt-auto">
+                    <!-- EDIT: PROJECT 3 TITLE -->
+                    <h3 class="text-3xl font-bold tracking-tight text-white mb-2">3D Environment Pack</h3>
+                    <!-- EDIT: PROJECT 3 CATEGORY -->
+                    <p class="text-gray-400 font-medium text-sm md:text-base">3D Asset Development</p>
+                    
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out w-full">
+                        <div class="overflow-hidden">
+                            <!-- EDIT: PROJECT 3 DESCRIPTION -->
+                            <p class="pt-6 text-gray-300 text-sm md:text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                A highly detailed 3D asset pack designed for modern game engines, utilizing optimized topologies, PBR texturing, and modular architecture logic.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PROJECT CARD 4 -->
+            <!-- EDIT: PROJECT 4 LINK -->
+            <a href="#" class="fade-up group relative border border-border flex flex-col justify-end p-8 md:p-10 min-h-[350px] md:min-h-[400px] overflow-hidden rounded-2xl bg-[#030303] hover:bg-[#0a0a0a] transition-colors duration-500 cursor-pointer mt-0 md:mt-12">
+                <!-- EDIT: PROJECT 4 BACKGROUND NUMBER -->
+                <div class="absolute top-4 right-6 text-stroke-muted text-[100px] font-black opacity-30 transition-all duration-500 group-hover:text-stroke-bright group-hover:-translate-y-2 select-none pointer-events-none">04</div>
+                
+                <!-- ARROW ICON -->
+                <div class="absolute top-10 right-10 text-white transition-transform duration-500 group-hover:rotate-45">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 19L19 5M19 5v10M19 5H9"></path></svg>
+                </div>
+
+                <div class="relative z-10 w-full mt-auto">
+                    <!-- EDIT: PROJECT 4 TITLE -->
+                    <h3 class="text-3xl font-bold tracking-tight text-white mb-2">Social Campaign: Momentum</h3>
+                    <!-- EDIT: PROJECT 4 CATEGORY -->
+                    <p class="text-gray-400 font-medium text-sm md:text-base">Content Strategy</p>
+                    
+                    <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out w-full">
+                        <div class="overflow-hidden">
+                            <!-- EDIT: PROJECT 4 DESCRIPTION -->
+                            <p class="pt-6 text-gray-300 text-sm md:text-base leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                A viral social media campaign strategy that organically reached over 4.7 million viewers through data-driven storytelling and targeted video content.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer id="contact" class="footer-section py-20 md:py-32 px-6 md:px-12 border-t border-border relative overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
+        
+        <!-- EDIT: FOOTER CALL TO ACTION EMAIL/LINK -->
+        <a href="mailto:hello@example.com" class="magnetic-btn px-8 md:px-10 py-4 md:py-5 bg-white text-black font-bold rounded-full text-lg md:text-xl mb-16 md:mb-24 z-10 hover:bg-gray-200 transition-colors">
+            <!-- EDIT: FOOTER CTA TEXT -->
+            Get in Touch
+        </a>
+
+        <!-- EDIT: BIG FOOTER TITLE TEXT -->
+        <h1 class="footer-title text-[15vw] font-black tracking-tighter leading-none text-center select-none z-10 w-full overflow-hidden flex justify-center">
+            LET'S TALK.
+        </h1>
+        
+        <!-- FOOTER BOTTOM LINKS -->
+        <div class="w-full max-w-7xl mt-16 md:mt-24 flex flex-col md:flex-row justify-between items-center text-sm md:text-base text-gray-500 z-10 gap-6">
+             <div class="font-medium">
+                <!-- EDIT: COPYRIGHT TEXT -->
+                © 2026 Raeyhan Rizky. All rights reserved.
+             </div>
+             <div class="flex gap-8 font-medium">
+                 <!-- EDIT: GITHUB LINK AND TEXT -->
+                 <a href="#" class="hover:text-white transition-colors duration-300">GitHub</a>
+                 <!-- EDIT: LINKEDIN LINK AND TEXT -->
+                 <a href="#" class="hover:text-white transition-colors duration-300">LinkedIn</a>
+                 <!-- EDIT: INSTAGRAM LINK AND TEXT -->
+                 <a href="#" class="hover:text-white transition-colors duration-300">Instagram</a>
+             </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & SCROLLTRIGGER SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- CUSTOM VANILLA JS LOGIC -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. REGISTER SCROLLTRIGGER
+            gsap.registerPlugin(ScrollTrigger);
+
+            // 2. FLOATING PROFILE PICTURE ANIMATION (Continuous Vertical Oscillation)
+            gsap.to(".profile-float-wrapper", {
+                y: -15,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+
+            // 3. PROFILE PICTURE HOVER INTERACTION
+            const hoverZone = document.getElementById("profile-hover-zone");
+            const profileImg = document.querySelector(".profile-img");
+            const profileTooltip = document.querySelector(".profile-tooltip");
+
+            hoverZone.addEventListener("mouseenter", () => {
+                // Scale up and add white glow
+                gsap.to(profileImg, { 
+                    scale: 1.05, 
+                    boxShadow: "0 0 25px 5px rgba(255,255,255,0.4)", 
+                    borderColor: "#ffffff", 
+                    duration: 0.4,
+                    ease: "power2.out"
+                });
+                // Slide up and fade in tooltip
+                gsap.to(profileTooltip, { 
+                    y: -10, 
+                    opacity: 1, 
+                    duration: 0.3,
+                    ease: "back.out(1.5)"
+                });
+            });
+
+            hoverZone.addEventListener("mouseleave", () => {
+                // Revert profile image
+                gsap.to(profileImg, { 
+                    scale: 1, 
+                    boxShadow: "0 0 0px 0px rgba(255,255,255,0)", 
+                    borderColor: "#1e1e1e", 
+                    duration: 0.4,
+                    ease: "power2.out"
+                });
+                // Revert tooltip
+                gsap.to(profileTooltip, { 
+                    y: 0, 
+                    opacity: 0, 
+                    duration: 0.3,
+                    ease: "power2.in"
+                });
+            });
+
+            // 4. MAGNETIC BUTTON LOGIC
+            const magneticBtns = document.querySelectorAll('.magnetic-btn');
+            
+            magneticBtns.forEach(btn => {
+                btn.addEventListener('mousemove', (e) => {
+                    const rect = btn.getBoundingClientRect();
+                    const h = rect.width / 2;
+                    const v = rect.height / 2;
+                    const x = e.clientX - rect.left - h;
+                    const y = e.clientY - rect.top - v;
+                    
+                    // Pull button towards cursor
+                    gsap.to(btn, {
+                        x: x * 0.4, 
+                        y: y * 0.4,
+                        duration: 0.4,
+                        ease: "power3.out"
+                    });
+                });
+
+                btn.addEventListener('mouseleave', () => {
+                    // Snap back to original position
+                    gsap.to(btn, {
+                        x: 0,
+                        y: 0,
+                        duration: 0.7,
+                        ease: "elastic.out(1, 0.3)"
+                    });
+                });
+            });
+
+            // 5. ABOUT & PROJECTS SECTION FADE-UP ANIMATIONS
+            const fadeUpElements = gsap.utils.toArray('.fade-up');
+            fadeUpElements.forEach(element => {
+                gsap.from(element, {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                });
+            });
+
+            // 6. FOOTER MASSIVE TEXT SLIDE UP ANIMATION
+            gsap.from(".footer-title", {
+                scrollTrigger: {
+                    trigger: ".footer-section",
+                    start: "top 95%",
+                    end: "bottom bottom",
+                    scrub: 1
+                },
+                y: 150,
+                opacity: 0,
+                ease: "none"
+            });
+
+        });
+    </script>
+</body>
+</html>
